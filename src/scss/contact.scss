@@ -1,0 +1,103 @@
+@import './config.scss';
+
+.contact-page {
+    min-width: 100%;
+    min-height: 100vh;
+}
+
+.contact-header {
+    font-size: 25px;
+    margin-top: 15vh;
+    text-align: center;
+    font-weight: lighter;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    justify-content: space-evenly;
+}
+
+.contact-left, .contact-right {
+    width: 100%;
+    margin: 3vw;
+}
+
+.contact-text {
+    font-size: 1.25rem;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.contact-footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-top: 7%;
+}
+
+.contact-item {
+    text-decoration: none;
+    font-size: 1.25rem;
+    margin: 1vw;
+    text-transform: uppercase;
+    color: $grey;
+
+    &:hover {
+        color: $accent;
+        font-weight: bold;
+        transition: ease-in-out 200ms;
+
+    }
+
+    &:hover .icon {
+        color: black;
+        transition: ease-in-out 200ms;
+
+    }
+}
+.resume {
+    text-decoration: underline;
+    color: $accent;
+    &:hover {
+        color: black;
+        transition: ease-in-out 200ms;
+    }
+}
+.icon {
+    font-size: 2em;
+}
+
+@media (max-width: 950px) {
+    .contact-page {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 80vw;
+    }
+    .contact-text {
+        font-size: 1.1em;
+    }
+    .contact-footer {
+        display: block;
+    }
+    .contact-item {
+        font-size: 1em;
+    }
+    .contact-right {
+    }
+}

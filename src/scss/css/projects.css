@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&display=swap");
+body {
+  font-family: "Quicksand", "Times New Roman", Times, serif, sans-serif;
+  margin: 0;
+  min-width: 100%;
+  min-height: 100vh;
+}
+
+.proj-container {
+  min-width: 100%;
+  min-height: 100vh;
+}
+
+.proj-header {
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-weight: lighter;
+  font-size: 25px;
+  margin-left: 2vw;
+  margin-top: 15vh;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.projects {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+    letter-spacing: 1px;
+  }
+}
+.project {
+  max-height: -moz-fit-content;
+  max-height: fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  margin: 1vw;
+  padding-top: 4vh;
+  padding-bottom: 4vh;
+  padding-left: 2vw;
+  padding-right: 2vw;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 3px solid rgb(211, 211, 211);
+  border-radius: 25px;
+  box-shadow: 0 10px 5px rgb(211, 211, 211) inset, 0 -10px 5px rgb(211, 211, 211) inset;
+}
+.project:hover {
+  box-shadow: 0 10px 5px rgb(255, 157, 0) inset, 0 -10px 5px rgb(255, 157, 0) inset;
+  transition: ease-in-out 250ms;
+}
+.project:hover .proj-link {
+  color: black;
+  animation: blinker 1s linear infinite;
+}
+.project:hover .proj-link:hover {
+  color: rgb(255, 157, 0);
+  animation: none;
+}
+
+.project-img {
+  max-width: 400px;
+}
+
+.proj-link {
+  font-style: italic;
+  text-decoration: none;
+  color: rgb(255, 157, 0);
+  font-size: 1.2em;
+}
+.proj-link:hover {
+  color: black;
+  transition: ease-in-out 250ms;
+}
+
+.proj-name {
+  font-style: italic;
+  text-decoration: none;
+  color: rgb(255, 157, 0);
+  font-size: 1.2em;
+}
+
+.icon {
+  font-size: 0.75em;
+  color: rgb(255, 157, 0);
+}
+
+.proj-desc {
+  font-size: 1em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 950px) {
+  .proj-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+  }
+  .proj-header {
+    text-align: center;
+  }
+  .proj-btn-container {
+    margin-bottom: 5vh;
+  }
+  .proj-btn {
+    width: -moz-fit-content;
+    width: fit-content;
+    font-size: 0.75em;
+  }
+  .proj-name {
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  .proj-desc {
+    text-align: center;
+  }
+}

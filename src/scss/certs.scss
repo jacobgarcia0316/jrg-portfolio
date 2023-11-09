@@ -1,0 +1,85 @@
+@import './config.scss';
+
+.certs-page {
+    min-width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.certs-header {
+    font-weight: lighter;
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-size: 25px;
+    margin-top: 5vh;
+    margin-left: 2vw;
+}
+
+.carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    width: 100vw;
+    height: fit-content;
+    justify-content: center;
+    text-align: center;
+}
+
+.cert {
+    height: 30vw;
+    border: 10px solid $light-grey;
+    border-radius: 15px;
+}
+
+.certs-footer {
+    min-height: fit-content;
+    margin-bottom: 2vh;
+    text-align: center;
+}
+
+.links-info {
+    margin-bottom: 1vh;
+    text-transform: uppercase;
+    font-size: 1.25em;
+}
+
+.prog-text {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.prog-link {
+    color: $grey;
+    font-size: 1em;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1vh;
+
+
+    &:hover {
+        color: $accent;
+        font-weight: bold;
+        cursor: pointer;
+    }
+}
+
+@media (max-width:950px) {
+    .certs-header {
+        text-align: center;
+        font-size: 1.5em;
+        margin-top: 0;
+    }
+    .carousel {
+        height: 700px;
+    }
+    .cert {
+        height: 30vh;
+        width: auto;
+    }
+
+
+}

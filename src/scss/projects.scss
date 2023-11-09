@@ -1,0 +1,123 @@
+@import './config.scss';
+
+.proj-container {
+    min-width: 100%;
+    min-height: 100vh;
+}
+
+.proj-header {
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-weight: lighter;
+    font-size: 25px;
+    margin-left: 2vw;
+    margin-top: 15vh;
+    height: fit-content;
+}
+
+.projects {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+@keyframes blinker {
+    50% {
+      opacity: 0;
+      letter-spacing: 1px;
+    }
+  }
+
+.project {
+    max-height: fit-content;
+    max-width: fit-content;
+    margin: 1vw;
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 3px solid $light-grey;
+    border-radius: 25px;
+    box-shadow: 0 10px 5px $light-grey inset, 0 -10px 5px $light-grey inset;
+
+    &:hover {
+        box-shadow: 0 10px 5px $accent inset, 0 -10px 5px $accent inset;
+        transition: ease-in-out 250ms;
+    }
+
+    &:hover .proj-link {
+        color: black;
+        animation: blinker 1s linear infinite;
+        &:hover {
+            color: $accent;
+            animation: none;
+        }
+    }
+}
+
+.project-img {
+    max-width: 400px;
+}
+
+.proj-link {
+    font-style: italic;
+    text-decoration: none;
+    color: $accent;
+    font-size: 1.2em;
+
+    &:hover {
+        color: black;
+        transition: ease-in-out 250ms;
+    }
+}
+
+.proj-name {
+    font-style: italic;
+    text-decoration: none;
+    color: $accent;
+    font-size: 1.2em;
+}
+
+.icon {
+    font-size: 0.75em;
+    color: $accent;
+}
+
+.proj-desc {
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+@media (max-width:950px) {
+    .proj-container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: auto;
+        width: 100%;
+    }
+    .proj-header {
+        text-align: center;
+    }
+    .proj-btn-container {
+        margin-bottom: 5vh;
+    }
+    .proj-btn {
+        width: fit-content;
+        font-size: 0.75em;
+    }
+    .proj-name {
+        text-align: center;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+    .proj-desc {
+        text-align: center;
+        
+    }
+}

@@ -1,0 +1,21 @@
+@import './config.scss';
+
+.toTop {
+    border: 1px solid $light-grey;
+    box-shadow: 0px 0px 10px 5px $light-grey;
+    left: 2vw;
+    animation: blinker 3s linear infinite;
+
+    &:hover {
+        cursor: pointer;
+        font-weight: bold;
+        animation: none;
+    }
+}
+
+@keyframes blinker {
+    50% {
+      opacity: 0;
+      letter-spacing: 1px;
+    }
+  }

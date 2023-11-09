@@ -1,0 +1,10 @@
+@import './config.scss';
+
+body {
+    height: 100vh;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&display=swap');
+
+$accent: rgb(255, 157, 0);
+$grey: rgb(84, 84, 84);
+$light-grey: rgb(211, 211, 211);
+
+body {
+    font-family: 'Quicksand', 'Times New Roman', Times, serif, sans-serif;
+    margin: 0;
+    min-width: 100%;
+    min-height: 100vh;
+}

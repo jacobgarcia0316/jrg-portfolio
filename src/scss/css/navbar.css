@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&display=swap");
+body {
+  font-family: "Quicksand", "Times New Roman", Times, serif, sans-serif;
+  margin: 0;
+  min-width: 100%;
+  min-height: 100vh;
+}
+
+hr {
+  height: 1px;
+  width: 90vw;
+  background-color: rgb(255, 157, 0);
+  opacity: 0.5;
+  border: none;
+  box-shadow: 0px 0px 5px 5px rgb(255, 157, 0);
+}
+
+.nav-page {
+  border-bottom: 3px solid rgb(211, 211, 211);
+  box-shadow: 0px 0px 5px 5px rgb(211, 211, 211);
+  background-color: rgb(211, 211, 211);
+  min-height: -moz-fit-content;
+  min-height: fit-content;
+  width: 100%;
+  align-items: center;
+  position: fixed;
+  z-index: 1000;
+}
+
+.navbar-container {
+  min-width: 750px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 3vw;
+  padding-right: 3vw;
+}
+
+.typer {
+  word-break: keep-all;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  font-size: 1.5em;
+  margin: auto;
+}
+
+.nav-list {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  margin-top: auto;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.nav-item {
+  list-style: none;
+  flex-direction: row;
+  text-transform: uppercase;
+  font-size: 1em;
+  font-weight: lighter;
+  border-bottom: 1px solid transparent;
+  letter-spacing: 2px;
+  position: relative;
+  border: none;
+  margin: 2vw;
+  background-color: transparent;
+}
+.nav-item:hover {
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+.nav-item:after {
+  background: none repeat scroll 0 0 transparent;
+  content: "";
+  display: block;
+  height: 4px;
+  left: 50%;
+  margin-top: 2px;
+  position: absolute;
+  background: rgb(255, 157, 0);
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.nav-item:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+@media (max-width: 950px) {
+  .navbar-container {
+    display: block;
+    width: 100%;
+  }
+  .typer {
+    font-size: 1.5em;
+    width: 60%;
+    text-align: center;
+    margin-left: 12vw;
+    margin-bottom: 1vh;
+  }
+  .nav-list {
+    min-width: 75%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+  }
+  .nav-item {
+    font-size: 0.75em;
+  }
+  .nav-item:hover {
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+  }
+  .nav-item:after {
+    background: none repeat scroll 0 0 transparent;
+    content: "";
+    display: block;
+    height: 4px;
+    left: 50%;
+    margin-top: 15px;
+    position: absolute;
+    background: rgb(255, 157, 0);
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  .nav-item:hover:after {
+    width: 100%;
+    left: 0;
+  }
+}

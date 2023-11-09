@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&display=swap");
+body {
+  font-family: "Quicksand", "Times New Roman", Times, serif, sans-serif;
+  margin: 0;
+  min-width: 100%;
+  min-height: 100vh;
+}
+
+hr {
+  height: 1px;
+  width: 90vw;
+  background-color: rgb(255, 157, 0);
+  opacity: 0.5;
+  border: none;
+  box-shadow: 0px 0px 5px 5px rgb(255, 157, 0);
+}
+
+.toTop {
+  border: 1px solid rgb(211, 211, 211);
+  box-shadow: 0px 0px 10px 5px rgb(211, 211, 211);
+  left: 2vw;
+  animation: blinker 3s linear infinite;
+}
+.toTop:hover {
+  cursor: pointer;
+  font-weight: bold;
+  animation: none;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+    letter-spacing: 1px;
+  }
+}
